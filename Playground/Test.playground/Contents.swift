@@ -52,3 +52,39 @@ do {
 }
 
 
+func loveCalculator() {
+    let loveScore = Int.random(in: 0...100)
+    print("\(loveScore)")
+    switch loveScore {
+    case 81...100:
+        print("You love each other")
+    case 41..<81:
+        print("you go together")
+    case ...40:
+        print("you will be loved forever")
+    default:
+        print("Error lovescore is out of range")
+    }
+    
+}
+
+loveCalculator()
+
+var ageMapping:Dictionary<String, Int> = [
+    "John": 12
+]
+print(ageMapping)
+ageMapping["Marry"] = 65
+print(ageMapping)
+ageMapping["Marry"] = 33
+print(ageMapping)
+for k in ageMapping.keys{
+    print("\(k) is age \(ageMapping[k]!)")
+}
+print(ageMapping["A"] ?? "unknow")
+for v in ageMapping.values{
+    print(v)
+}
+for (k, v) in ageMapping{
+    print(k, v)
+}
